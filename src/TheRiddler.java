@@ -14,16 +14,26 @@ int score = 0;
 		// 3. Ask the user a riddle. Here are some ideas: bit.ly/some-riddles
 String answer=JOptionPane.showInputDialog("What travels around the world and stays in one corner?");
 		// 4. If they got the answer right, pop up "correct!" and increase the score by one
-if(answer.equals("post stamp")){
+if(answer.equals("a post stamp")){
 	JOptionPane.showMessageDialog(null, "Correct");
 	score = score +1;
+	JOptionPane.showMessageDialog(null, "Your Score "+score);
+	String answer2=JOptionPane.showInputDialog("What is a cow with no legs called?");
+	if(answer2.equals("ground beef")) {
+		JOptionPane.showMessageDialog(null, "Correct");
+		score=score+1;
+		JOptionPane.showMessageDialog(null, "Your Score "+score);
+		}else {
+			JOptionPane.showMessageDialog(null, "Wrong");
+		}
 }else {
+	JOptionPane.showMessageDialog(null, "Wrong");
 		// 5. Otherwise, say "wrong" and tell them the answer
 
 		// 6. Add some more riddles
 
 		// 2. Make a pop up to show the score.
-		JOptionPane.showMessageDialog(null, score);
+		JOptionPane.showMessageDialog(null, "Your Score "+score);
 	}
-}
+}}
 
